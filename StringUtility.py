@@ -57,10 +57,7 @@ class StringUtility:
     self: str, inputted string
     returns: int, returns the combined ascii values of all characters in the string.
     '''
-    ascii = 0
-    for character in self.string:
-      ascii = ord(character) + ascii
-    return (ascii)
+    return sum([ord(character) for character in self.string])
 
   def cipher(self):
     '''
