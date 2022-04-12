@@ -19,7 +19,8 @@ Grace days remaining: < # >/5
  < What parts of the project you were not able to complete >
 
 ## REFERENCES:
- < List any outside resources used >
+https://book.pythontips.com/en/latest/ternary_operators.html
+https://realpython.com/list-comprehension-python/
 
 ## MISCELLANEOUS COMMENTS:
  < Anything you would like the grader to know >
