@@ -26,4 +26,7 @@ class StringUtility:
     string = self.string
     if len(string) <= 1:
       return string
-    return string.replace(string[0], "*")
+    return string[0] + string[1:].replace(string[0], "*")
+
+  def asciiSum(self):
+    
