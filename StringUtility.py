@@ -29,4 +29,9 @@ class StringUtility:
     return string[0] + string[1:].replace(string[0], "*")
 
   def asciiSum(self):
-    
+    ascii = 0
+    for character in self.string:
+      ascii = ord(character) + ascii
+    return int(ascii)
+
+  def cipher(self): 
