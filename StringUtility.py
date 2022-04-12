@@ -32,6 +32,20 @@ class StringUtility:
     ascii = 0
     for character in self.string:
       ascii = ord(character) + ascii
-    return int(ascii)
+    return (ascii)
 
-  def cipher(self): 
+  def cipher(self):
+    ciphered = ""
+    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lowercase = "abcdefghijklmnopqrstuvwxyz"
+    space = " "
+    for character in self.string:
+      if character in uppercase:
+        changedcharacter = chr(((ord(character) + len(self.string) - 65) % 26) + 65)
+        ciphered = ciphered + changedcharacter
+      if character in lowercase: 
+        changedcharacter = chr(((ord(character) + len(self.string) - 97) % 26) + 97)
+        ciphered = ciphered + changedcharacter
+      if character in space: 
+        ciphered = ciphered + character
+    return ciphered
