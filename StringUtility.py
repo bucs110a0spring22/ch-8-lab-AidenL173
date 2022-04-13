@@ -28,10 +28,7 @@ class StringUtility:
     self: str, inputted string
     returns: str, returns first and last 2 chars of string if it's length is over 2, otherwise returns an empty string
     '''
-    string = self.string
-    if len(string) <= 2:
-      return ""
-    return string[0] + string[1] + string[-2] + string[-1]
+    return self.string[0] + self.string[1] + self.string[-2] + self.string[-1] if len(self.string) > 2 else ""
 
   def fixStart(self):
     '''
