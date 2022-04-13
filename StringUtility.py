@@ -20,7 +20,7 @@ class StringUtility:
     self: str, inputted string
     return: str, returns the amount of vowels if it's less than 5, otherwise returns "many"
     '''
-    return str(len([i for i in self.string if i in "aeiouAEIOU"])) if len([i for i in self.string if i in "aeiouAEIOU"]) < 5 else "many"
+    return str(len([vowel for vowel in self.string if vowel in "aeiouAEIOU"])) if len([vowel for vowel in self.string if vowel in "aeiouAEIOU"]) < 5 else "many"
 
   def bothEnds(self):
     '''
