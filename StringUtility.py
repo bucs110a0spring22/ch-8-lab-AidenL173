@@ -38,11 +38,8 @@ class StringUtility:
     returns a string where all occurrences of its first char have been changed to '*', except the first char itself.
     self: str, inputted string
     return: str, returns the changed string if length is over 1, otherwise returns original string
-    '''
-    string = self.string
-    if len(string) <= 1:
-      return string
-    return string[0] + string[1:].replace(string[0], "*")
+    ''' 
+    return self.string[0] + self.string[1:].replace(self.string[0], "*") if len(self.string) > 1 else self.string
 
   def asciiSum(self):
     '''
