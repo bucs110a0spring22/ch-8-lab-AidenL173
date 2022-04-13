@@ -52,17 +52,4 @@ class StringUtility:
     self: str, inputted string
     returns: str, returns the encrypted letters of the string
     '''
-    ciphered = ""
-    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lowercase = "abcdefghijklmnopqrstuvwxyz"
-    space = " "
-    for character in self.string:
-      if character in uppercase:
-        changedcharacter = chr(((ord(character) + len(self.string) - 65) % 26) + 65)
-        ciphered = ciphered + changedcharacter
-      if character in lowercase: 
-        changedcharacter = chr(((ord(character) + len(self.string) - 97) % 26) + 97)
-        ciphered = ciphered + changedcharacter
-      if character in space: 
-        ciphered = ciphered + character
-    return ciphered
+    return (''.join([chr(((ord(character) + len(self.string) - 97) % 26) + 97) if character in "abcdefghijklmnopqrstuvwxyz" else chr(((ord(character) + len(self.string) - 65) % 26) + 65) if character in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" else character for character in self.string]))
